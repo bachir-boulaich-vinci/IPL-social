@@ -1,22 +1,25 @@
 function containsSpecialChars(password) {
-  const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/g;
+  const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/;
   return specialCharacters.test(password);
 }
 
 function containsNumberChars(password) {
-  const numberCharacters = /[0123456789]/g;
+  const numberCharacters = /[0123456789]/;
   return numberCharacters.test(password);
+}
+
+function containsIPL(password){
+    return password.toUpperCase().includes("IPL");
 }
 
 function passwordCheck(password) {
   if (
     password.length < 8 ||
     !containsSpecialChars(password) ||
-    !containsNumberChars(password)
+    !containsNumberChars(password) ||
+    containsIPL(password)
   )
     return false;
-
-  if(password.toUpperCase().includes("IPL")) return false;
   return true;
 }
 
