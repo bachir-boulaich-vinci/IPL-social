@@ -61,8 +61,14 @@ describe("Password Checker: check if the password is valid", () => {
         expect(result).toBe(true);
     });
 
-    it("Password: When password contains IPL", function(){
+    it("Password: When password contains IPL (upper case)", function(){
         const result = passwordCheck("aa3a$a$aIPL");
+
+        expect(result).toBe(false);
+    });
+
+    it("Password: When password contains ipl (lower case)", function(){
+        const result = passwordCheck("aa3a$a$aipl");
 
         expect(result).toBe(false);
     });
