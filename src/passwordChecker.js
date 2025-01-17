@@ -16,7 +16,7 @@ function passwordCheck(password) {
   )
     return false;
 
-  if(password.includes("IPL") || password.includes("ipl")) return false;
+  if(password.toUpperCase().includes("IPL")) return false;
   return true;
 }
 
