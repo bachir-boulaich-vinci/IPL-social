@@ -30,4 +30,10 @@ describe("Password Checker: check if the password is valid", () => {
 
         expect(result).toBe(false);
     });
+
+    it("Password: When password contains character $", function() {
+        const result = passwordCheck("111111$1");
+
+        expect(result).toBe(true);
+    });
 });
