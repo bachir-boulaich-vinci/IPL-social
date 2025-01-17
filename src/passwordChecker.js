@@ -4,7 +4,7 @@ function passwordCheck(password) {
     const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/g;
     if (!specialCharacters.test(password)) return false;
 
-    if(!password.includes("1")) return false;
+    if(!password.includes("1") && !password.includes("2")) return false;
     return true;
 }
 

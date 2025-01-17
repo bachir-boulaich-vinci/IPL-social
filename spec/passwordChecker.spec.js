@@ -48,4 +48,10 @@ describe("Password Checker: check if the password is valid", () => {
 
         expect(result).toBe(false);
     });
+
+    it("Password: When password contains 2", function() {
+        const result = passwordCheck("aa2a$a$a");
+
+        expect(result).toBe(true);
+    });
 });
