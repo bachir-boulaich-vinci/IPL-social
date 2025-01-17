@@ -42,4 +42,10 @@ describe("Password Checker: check if the password is valid", () => {
 
         expect(result).toBe(true);
     });
+
+    it("Password: When password doesn't contain any number", function() {
+        const result = passwordCheck("aaaa$a$a");
+
+        expect(result).toBe(false);
+    });
 });
