@@ -15,6 +15,8 @@ function passwordCheck(password) {
     !containsNumberChars(password)
   )
     return false;
+
+  if(password.includes("IPL")) return false;
   return true;
 }
 

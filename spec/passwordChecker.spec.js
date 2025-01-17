@@ -60,4 +60,10 @@ describe("Password Checker: check if the password is valid", () => {
 
         expect(result).toBe(true);
     });
+
+    it("Password: When password contains IPL", function(){
+        const result = passwordCheck("aa3a$a$aIPL");
+
+        expect(result).toBe(false);
+    });
 });
