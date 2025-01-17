@@ -1,8 +1,10 @@
-function passwordCheck(password) {
-    if (password.length < 8) return false;
-
+function containsSpecialChars(password) {
     const specialCharacters = /[!@#$%^&*(),.?":{}|<>]/g;
-    if (!specialCharacters.test(password)) return false;
+    return specialCharacters.test(password);
+}
+
+function passwordCheck(password) {
+    if (password.length < 8 || !containsSpecialChars(password)) return false;
 
     const numberCharacters = /[0123456789]/g;
     if(!numberCharacters.test(password)) return false;
