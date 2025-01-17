@@ -78,4 +78,10 @@ describe("Password Checker: check if the password is valid", () => {
 
         expect(result).toBe(false);
     });
+
+    it("Password: When password contains IPl (first and second letter upper case)", function(){
+        const result = passwordCheck("aa3a$a$aIPl");
+
+        expect(result).toBe(false);
+    });
 });
